@@ -4,15 +4,16 @@
 * Lincense: MIT
 * https://github.com/newghost/js-lottery.git
 */
-var Lottery = (function() {
-  /*
-  Fix old IE.
-  */
-  var Audio = Audio || function() { 
-    var self  = this;
-    self.play = self.stop = new Function();
-  };
+/*
+Fix old IE.
+*/
+var Audio = Audio || function() { 
+  var self  = this;
+  self.play = self.stop = new Function();
+};
 
+
+var Lottery = (function() {
 
   var timer           = null,
       itemWidth       = 142,
@@ -61,8 +62,6 @@ var Lottery = (function() {
     (curPos % itemWidth == 0 - itemWidth / 2) && (curPos = curPos - itemWidth / 2);
 
     var selected  = getCurIdx();
-
-    if (selected % 2 != 0) selected += 1;
 
     setCurIdx(selected);
   };
