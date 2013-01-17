@@ -1,0 +1,82 @@
+body{
+    background:#000 url("bg.jpg") no-repeat center 15px;
+}
+
+#wrapper{
+    width: 1000px;
+    margin:0 auto;
+}
+
+#lottery {
+  bottom: 10px;
+  position: fixed;
+  width: 994px;
+}
+
+#lottery ul {
+    width: 20000px;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lottery li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+#lottery li img {
+    width: 132px;
+    border: 0;
+}
+
+#lottery-control {
+  height: 14px;
+  margin: 40px auto 0;
+  width: 100px;
+}
+
+#lottery-control a{
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#lottery-control a:first-child{
+    float: left;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#lottery-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 994px;
+    height: 75px;
+}
+
+#lottery-selected {
+    border: 2px dashed #ff0;
+    bottom: 0;
+    height: 80px;
+    left: -5px;
+    margin: -133px auto 0;
+    position: relative;
+    width: 142px;
+}
+
+#lottery-hero{
+    border: medium none;
+    box-shadow: 5px 5px 30px #FFFF00;
+    margin: 0 auto 9%;
+    width: 300px;
+}
+
+#lottery-hero img{
+    width: 300px;
+}
