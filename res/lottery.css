@@ -80,3 +80,19 @@ body{
 #lottery-hero img{
     width: 300px;
 }
+
+
+.byphone #lottery li b {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  width: 132px;
+}
+
+.byphone #lottery-hero {
+  background-color: #FFFFFF;
+  font-size: 100px;
+  margin: 0 auto 20%;
+  text-align: center;
+  width: 690px;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Photo Lottery Example</title>
+<link rel="stylesheet" type="text/css" href="res/lottery.css" />
+</head>
+<body class="byphone">
+
+<div id="wrapper">
+    <div id="lottery">
+        <div id="lottery-hero">
+            <span></span>
+        </div>
+
+        <div id="lottery-container" data-url="phone.txt">
+            <ul></ul>
+        </div>
+        <div id="lottery-control">
+            <a href="#" onclick="Lottery.start()">START</a>
+            <a href="#" onclick="Lottery.stop()">STOP</a>
+        </div>
+        <div id="lottery-selected"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="res/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="res/lottery_phone.js"></script>
+
+
+</body>
+</html>
