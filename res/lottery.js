@@ -20,7 +20,9 @@ var Lottery = (function() {
       itemCount       = 0,
       curPos          = 0;
 
-  var stopAudio       = new Audio("res/ping.mp3");
+  var stopAudio       = new Audio("res/ping.mp3")
+    , backAudio       = new Audio("res/back.mp3")
+    ;
 
   var $container      = $("#lottery-container"),
       $content        = $("#lottery-container ul"),
@@ -37,6 +39,9 @@ var Lottery = (function() {
 
   var start  = function() {
     clearInterval(timer);
+
+    backAudio.play();
+    stopAudio.pause();
 
     timer = setInterval(function() {
 
@@ -56,6 +61,7 @@ var Lottery = (function() {
     clearInterval(timer);
     timer = null;
 
+    backAudio.pause();
     stopAudio.play();
 
     //Roll at the half width?

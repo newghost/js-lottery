@@ -11,6 +11,10 @@ Please find [DEMO](http://newghost.github.com/js-lottery/lottery.html)
 -----------------------------------------
 
 
+新增使用名字（手机号）抽奖，抽中会有雪花动画效果(基于snowstorm开源脚本），添加背动感背景音乐，[示例](http://newghost.github.com/js-lottery/lottery_phone.html)
+-----------------------------------------
+
+
 Disclaimer: All materials got from the Internet, if infringement, please inform me immediately.
 
 新增按手机号抽奖，只需要更新phone.txt文件即可。

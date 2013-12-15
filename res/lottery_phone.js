@@ -13,19 +13,30 @@ var Audio = Audio || function() {
 };
 
 
+var snowStorm = snowStorm || {};
+
+snowStorm.className = "snow";
+
 var Lottery = (function() {
 
-  var timer           = null,
-      itemWidth       = 142,
-      itemCount       = 0,
-      curPos          = 0;
+  var timer           = null
+    , itemWidth       = 142
+    , itemCount       = 0
+    , curPos          = 0
+    ;
 
-  var stopAudio       = new Audio("res/ping.mp3");
+  var stopAudio       = new Audio("res/ping.mp3")
+    , backAudio       = new Audio("res/back.mp3")
+    ;
 
-  var $container      = $("#lottery-container"),
-      $content        = $("#lottery-container ul"),
-      $item,
-      $hero           = $("#lottery-hero span");
+
+  backAudio.loop = true;
+
+  var $container      = $("#lottery-container")
+    , $content        = $("#lottery-container ul")
+    , $item
+    , $hero           = $("#lottery-hero span")
+    ;
 
   var init = function() {
 
@@ -54,6 +65,10 @@ var Lottery = (function() {
   var start  = function() {
     clearInterval(timer);
 
+    backAudio.play();
+    stopAudio.pause();
+    $(document.body).addClass("stop");
+
     timer = setInterval(function() {
 
       curPos = parseInt($content.css("left")) | 0;
@@ -63,7 +78,7 @@ var Lottery = (function() {
 
       $content.css("left", curPos);
 
-    }, 25);
+    }, 50);
 
     $hero.hide();
   };
@@ -72,7 +87,9 @@ var Lottery = (function() {
     clearInterval(timer);
     timer = null;
 
+    backAudio.pause();
     stopAudio.play();
+    $(document.body).removeClass("stop");
 
     //Roll at the half width?
     (curPos % itemWidth == 0 - itemWidth / 2) && (curPos = curPos - itemWidth / 2);
@@ -94,7 +111,7 @@ var Lottery = (function() {
         phone  = $items.eq(idx + 3).html();
 
     $content.css("left", curPos);
-    $hero.html(phone).show("slow");
+    $hero.html(phone).show('slow');
 
     console.log(curPos, idx);
   };
